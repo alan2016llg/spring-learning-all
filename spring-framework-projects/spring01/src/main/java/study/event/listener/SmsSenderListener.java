@@ -2,7 +2,7 @@ package study.event.listener;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
-import study.event.RegisterSuccessEvent;
+import study.event.service.RegisterSuccessEvent;
 
 /**
  * @Author: liulg

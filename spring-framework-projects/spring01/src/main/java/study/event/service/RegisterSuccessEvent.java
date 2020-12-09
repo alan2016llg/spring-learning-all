@@ -1,4 +1,4 @@
-package study.event;
+package study.event.service;
 
 import org.springframework.context.ApplicationEvent;
 

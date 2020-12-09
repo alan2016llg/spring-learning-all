@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: liulg
  * @Date: 2020/10/14 10:55
+ * 监听容器刷新事件
  */
 @Component
 public class ContextRefreshedEventListener implements ApplicationListener<ContextRefreshedEvent> {
