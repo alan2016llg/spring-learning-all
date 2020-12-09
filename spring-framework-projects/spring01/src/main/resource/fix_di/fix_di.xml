@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--配置文件注入各种属性-->
+
+    <!--提前声明,注入set-->
+    <bean id="cat" class="study.fixdi.bean.Cat"></bean>
+
+    <bean id="person" class="study.fixdi.bean.Person">
+        <property name="names" >
+            <array>
+                <value>zhang</value>
+                <value>lisi</value>
+            </array>
+        </property>
+        <property name="tels">
+            <list>
+                <value>11111</value>
+                <value>22222</value>
+            </list>
+        </property>
+        <property name="cats">
+            <set>
+                <ref bean="cat"></ref>
+                <bean  class="study.fixdi.bean.Cat"></bean>
+            </set>
+        </property>
+
+        <property name="events">
+            <map>
+                <entry key="num" value="123"></entry>
+                <entry key="cal" value="456"></entry>
+            </map>
+        </property>
+        <property name="props">
+            <props>
+                <prop key="sex">boy</prop>
+                <prop key="age">18</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

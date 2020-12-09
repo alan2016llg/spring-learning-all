@@ -1,0 +1,8 @@
+study.spi.DemoDao=study.spi.MysqlDao,study.spi.H2Dao
+study.enablejdbcspi.EnableJdbc=study.enablejdbcspi.MySQLJdbcConfiguration,\
+  study.enablejdbcspi.H2JdbcConfiguration,\
+  study.enablejdbcspi.OracleJdbcConfiguration
+java.sql.Driver=\
+  com.mysql.jdbc.Driver,\
+  oracle.jdbc.driver.OracleDriver,\
+  org.h2.Driver
