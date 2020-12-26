@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Configuration;
  * @Author: liulg
  * @Date: 2020/12/14 22:17
  */
-//@Configuration
+@Configuration
 @ComponentScan(basePackages = "study.beanlife")
 public class LifecycleSourceConfiguration {
 

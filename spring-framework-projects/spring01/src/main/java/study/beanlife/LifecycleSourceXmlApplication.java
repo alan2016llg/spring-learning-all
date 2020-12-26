@@ -8,7 +8,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @Date: 2020/12/14 22:20
  *
  * 基于xml文件演示bean周期中各种执行顺序
- * 手动又调用了refresh,会进行一些销毁的回调逻辑，实际可以看做是ioc容器的销毁后，再重新初始化ioc容器
+ * 顺序：   构造器-->@PostConstruct-->afterPropertiesSet(InitializingBean接口)-->init-method-->postProcessAfterInitialization(BeanPostProcessor接口)
+ *     -->手动调用start(Lifecycle)-->销毁容器-->手动调用stop(Lifecycle)-->postProcessBeforeDestruction(DestructionAwareBeanPostProcessor)
+ *     -->@PreDestroy-->destroy(DisposableBean)-->destroy-method
+ *
+ * 重复调用refresh时，会回调postProcessBeforeDestruction(DestructionAwareBeanPostProcessor)，@PreDestroy，DisposableBean，destroy-method这些方法；
+ * 然后再执行构造器，@PostConstruct，InitializingBean，init-Method，postProcessAfterInitialization(BeanPostProcessor)这些方法。
+ * 所以：刷新动作等同于销毁容器后再新建容器
  *
  */
 public class LifecycleSourceXmlApplication {
@@ -16,6 +22,8 @@ public class LifecycleSourceXmlApplication {
         ApplicationContext context = new ClassPathXmlApplicationContext("beanlife/bean_life.xml");
         System.out.println("================准备刷新IOC容器==================");
         ((ClassPathXmlApplicationContext) context).refresh();
+//        System.out.println("================准备第三次刷新IOC容器==================");
+//        ((ClassPathXmlApplicationContext) context).refresh();
         System.out.println("================IOC容器刷新完毕==================");
         ((ClassPathXmlApplicationContext) context).start();
         System.out.println("================IOC容器启动完成==================");
