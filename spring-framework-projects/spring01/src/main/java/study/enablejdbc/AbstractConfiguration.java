@@ -9,7 +9,7 @@ import org.springframework.core.env.Environment;
  * @Date: 2020/12/8 15:17
  */
 @PropertySource("classpath:enablejdbc/jdbc.properties")
-public  class AbstractConfiguration {
+public class AbstractConfiguration {
     @Autowired
     Environment environment;
 }

@@ -23,6 +23,6 @@ public class RegisterService implements ApplicationEventPublisherAware {
 
     @Override
     public void setApplicationEventPublisher(ApplicationEventPublisher applicationEventPublisher) {
-        this.publisher=applicationEventPublisher;
+        this.publisher = applicationEventPublisher;
     }
 }

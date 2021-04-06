@@ -15,6 +15,7 @@ public class Cat {
     public void init() {
         System.out.println(name + "被初始化了。。。");
     }
+
     public void destroy() {
         System.out.println(name + "被销毁了。。。");
     }

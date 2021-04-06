@@ -9,7 +9,7 @@ import java.util.ServiceLoader;
 public class JdkSpiApplication {
     public static void main(String[] args) {
         ServiceLoader<DemoDao> loader = ServiceLoader.load(DemoDao.class);
-        loader.iterator().forEachRemaining(dao->{
+        loader.iterator().forEachRemaining(dao -> {
             System.out.println(dao);
         });
     }

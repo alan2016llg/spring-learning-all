@@ -12,8 +12,8 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "study.beanlife")
 public class LifecycleSourceConfiguration {
 
-    @Bean(initMethod = "initMethod",destroyMethod = "destroyMethod")
-    public Person person(){
+    @Bean(initMethod = "initMethod", destroyMethod = "destroyMethod")
+    public Person person() {
         Person person = new Person();
         person.setName("lisi");
         return person;

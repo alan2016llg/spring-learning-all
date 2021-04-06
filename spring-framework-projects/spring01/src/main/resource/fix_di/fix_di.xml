@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<!--配置文件注入各种属性-->
+    <!--配置文件注入各种属性-->
 
     <!--提前声明,注入set-->
     <bean id="cat" class="study.fixdi.bean.Cat"></bean>
 
     <bean id="person" class="study.fixdi.bean.Person">
-        <property name="names" >
+        <property name="names">
             <array>
                 <value>zhang</value>
                 <value>lisi</value>
@@ -24,7 +24,7 @@
         <property name="cats">
             <set>
                 <ref bean="cat"></ref>
-                <bean  class="study.fixdi.bean.Cat"></bean>
+                <bean class="study.fixdi.bean.Cat"></bean>
             </set>
         </property>
 

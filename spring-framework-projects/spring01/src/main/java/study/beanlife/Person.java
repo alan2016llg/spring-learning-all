@@ -11,7 +11,7 @@ import javax.annotation.PreDestroy;
  * @Author: liulg
  * @Date: 2020/12/14 21:47
  */
-public class Person implements InitializingBean,DisposableBean,Lifecycle {
+public class Person implements InitializingBean, DisposableBean, Lifecycle {
     private String name;
 
     private boolean state = false;

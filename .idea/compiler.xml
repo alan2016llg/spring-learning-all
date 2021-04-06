@@ -6,13 +6,17 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka-server" />
         <module name="spinghello" />
         <module name="spring01" />
+        <module name="springbootdemo" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
+      <module name="eureka-server" target="1.8" />
       <module name="spinghello" target="1.8" />
       <module name="spring01" target="1.8" />
+      <module name="springbootdemo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -18,9 +18,9 @@ public class Test2 {
         ctx.registerBeanDefinition("laowang", personDefinition);
         //注册cat类
         BeanDefinition catDefinition = BeanDefinitionBuilder.rootBeanDefinition(Cat.class)
-                .addPropertyValue("name","mimi")
-                .addPropertyReference("person","laowang").getBeanDefinition();
-        ctx.registerBeanDefinition("cat",catDefinition);
+                .addPropertyValue("name", "mimi")
+                .addPropertyReference("person", "laowang").getBeanDefinition();
+        ctx.registerBeanDefinition("cat", catDefinition);
         //注册dog,并设置为原型bean
         BeanDefinition dogDefinition = BeanDefinitionBuilder.rootBeanDefinition(Dog.class)
                 .addPropertyValue("name", "汪汪").addPropertyReference("person", "laowang")

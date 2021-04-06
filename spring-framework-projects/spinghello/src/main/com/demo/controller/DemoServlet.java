@@ -20,10 +20,11 @@ import java.util.Date;
 public class DemoServlet extends HttpServlet {
 
     private DemoService demoService = new DemoServiceImpl();
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        resp.getWriter().print(demoService.findAll().toString()+getServletContext().getAttribute("sessionid"));
-      //  resp.sendRedirect("/spring/index.jsp");
+        resp.getWriter().print(demoService.findAll().toString() + getServletContext().getAttribute("sessionid"));
+        //  resp.sendRedirect("/spring/index.jsp");
     }
 }

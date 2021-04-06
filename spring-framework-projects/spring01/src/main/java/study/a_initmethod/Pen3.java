@@ -11,12 +11,10 @@ import javax.annotation.PreDestroy;
 /**
  * @Author: liulg
  * @Date: 2020/10/9 14:13
- *
- *
  */
 
 
-public class Pen3 implements InitializingBean,DisposableBean {
+public class Pen3 implements InitializingBean, DisposableBean {
     private Integer ink;
 
     @Override
@@ -32,10 +30,11 @@ public class Pen3 implements InitializingBean,DisposableBean {
     }
 
     public void initb() {
-        System.out.println(  "被初始化了。。。");
+        System.out.println("被初始化了。。。");
     }
+
     public void destroyb() {
-        System.out.println(  "被销毁了。。。");
+        System.out.println("被销毁了。。。");
     }
 
     @PostConstruct
@@ -43,6 +42,7 @@ public class Pen3 implements InitializingBean,DisposableBean {
         System.out.println("钢笔中已加满墨水。。。");
         this.ink = 100;
     }
+
     @PreDestroy
     public void outwellInk() {
         System.out.println("钢笔中的墨水都放干净了。。。");

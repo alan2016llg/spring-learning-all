@@ -7,7 +7,7 @@ import org.springframework.beans.factory.config.DestructionAwareBeanPostProcesso
  * @Author: liulg
  * @Date: 2020/12/14 21:55
  */
-public class LifecycleDestructionPostProcessor implements DestructionAwareBeanPostProcessor{
+public class LifecycleDestructionPostProcessor implements DestructionAwareBeanPostProcessor {
     @Override
     public void postProcessBeforeDestruction(Object bean, String beanName) throws BeansException {
         if (bean instanceof Cat) {

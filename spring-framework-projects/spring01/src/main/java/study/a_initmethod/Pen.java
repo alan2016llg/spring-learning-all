@@ -18,6 +18,7 @@ public class Pen {
         System.out.println("钢笔中已加满墨水。。。");
         this.ink = 100;
     }
+
     @PreDestroy
     public void outwellInk() {
         System.out.println("钢笔中的墨水都放干净了。。。");

@@ -12,7 +12,7 @@ import javax.annotation.PreDestroy;
 public class TermainBean {
 
     @PreDestroy
-    public  void   preDestroy(){
+    public void preDestroy() {
         System.out.println("销毁");
     }
 

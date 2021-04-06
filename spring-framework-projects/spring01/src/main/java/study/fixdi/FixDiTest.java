@@ -9,7 +9,6 @@ import study.fixdi.bean.PersonAnno;
 /**
  * @Author: liulg
  * @Date: 2020/9/30 16:44
- *
  */
 public class FixDiTest {
     public static void main(String[] args) {

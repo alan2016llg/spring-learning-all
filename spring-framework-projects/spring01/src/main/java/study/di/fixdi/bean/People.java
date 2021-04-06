@@ -14,7 +14,7 @@ public class People {
 
     @Autowired
     @Qualifier("adog")
-    private  Dog dog;
+    private Dog dog;
 
 
     public Dog getDog() {

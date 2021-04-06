@@ -12,6 +12,6 @@ import org.springframework.core.type.AnnotationMetadata;
 public class WaiterRegistrar implements ImportBeanDefinitionRegistrar {
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
-        registry.registerBeanDefinition("waiter",new RootBeanDefinition(Waiter.class));
+        registry.registerBeanDefinition("waiter", new RootBeanDefinition(Waiter.class));
     }
 }

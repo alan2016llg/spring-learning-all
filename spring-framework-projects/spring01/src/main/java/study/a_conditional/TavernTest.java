@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 /**
  * @Author: liulg
  * @Date: 2020/10/14 14:38
- *
+ * <p>
  * 观察在@EnableTavern注解中是否导入boss,决定了是否创建标注了@ConditionalOnBean的bean
  */
 public class TavernTest {

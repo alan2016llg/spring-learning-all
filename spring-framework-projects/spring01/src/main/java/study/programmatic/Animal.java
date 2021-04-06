@@ -4,7 +4,7 @@ package study.programmatic;
  * @Author: liulg
  * @Date: 2020/12/7 21:23
  */
-public abstract  class Animal {
+public abstract class Animal {
     protected String name;
 
     protected Person person;
@@ -24,6 +24,7 @@ public abstract  class Animal {
                 ", person=" + person +
                 '}';
     }
+
     public Animal() {
         System.out.println("Animal constructor run ......");
     }

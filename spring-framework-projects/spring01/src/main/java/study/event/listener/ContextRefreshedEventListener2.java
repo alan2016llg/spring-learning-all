@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @Date: 2020/10/14 10:55
  */
 @Component
-public class ContextRefreshedEventListener2  {
+public class ContextRefreshedEventListener2 {
 
     @EventListener
     public void listener(ContextClosedEvent event) {

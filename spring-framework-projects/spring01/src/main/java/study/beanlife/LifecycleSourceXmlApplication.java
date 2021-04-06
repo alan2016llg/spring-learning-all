@@ -6,16 +6,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @Author: liulg
  * @Date: 2020/12/14 22:20
- *
+ * <p>
  * 基于xml文件演示bean周期中各种执行顺序
  * 顺序：   构造器-->@PostConstruct-->afterPropertiesSet(InitializingBean接口)-->init-method-->postProcessAfterInitialization(BeanPostProcessor接口)
- *     -->手动调用start(Lifecycle)-->销毁容器-->手动调用stop(Lifecycle)-->postProcessBeforeDestruction(DestructionAwareBeanPostProcessor)
- *     -->@PreDestroy-->destroy(DisposableBean)-->destroy-method
- *
+ * -->手动调用start(Lifecycle)-->销毁容器-->手动调用stop(Lifecycle)-->postProcessBeforeDestruction(DestructionAwareBeanPostProcessor)
+ * -->@PreDestroy-->destroy(DisposableBean)-->destroy-method
+ * <p>
  * 重复调用refresh时，会回调postProcessBeforeDestruction(DestructionAwareBeanPostProcessor)，@PreDestroy，DisposableBean，destroy-method这些方法；
  * 然后再执行构造器，@PostConstruct，InitializingBean，init-Method，postProcessAfterInitialization(BeanPostProcessor)这些方法。
  * 所以：刷新动作等同于销毁容器后再新建容器
- *
  */
 public class LifecycleSourceXmlApplication {
     public static void main(String[] args) {

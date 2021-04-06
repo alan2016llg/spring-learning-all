@@ -12,9 +12,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class Config {
 
-    @Bean(initMethod = "initb",destroyMethod = "destroyb")
+    @Bean(initMethod = "initb", destroyMethod = "destroyb")
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    public  Pen3 pen3(){
-        return  new Pen3();
+    public Pen3 pen3() {
+        return new Pen3();
     }
 }

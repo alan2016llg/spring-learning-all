@@ -6,7 +6,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @Author: liulg
  * @Date: 2020/12/14 22:34
- *
+ * <p>
  * 注解方式演示 bean生命周期中的各种执行顺序
  */
 public class LifecycleSourceAnnotationApplication {

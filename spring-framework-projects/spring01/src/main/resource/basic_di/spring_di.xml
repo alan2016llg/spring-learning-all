@@ -10,7 +10,7 @@
     <bean id="cat" class="study.di.bean.Cat">
         <property name="person" ref="person"></property>
     </bean>
-    
+
     <bean id="dog" class="study.di.bean.Dog">
         <constructor-arg value="汪汪"/>
     </bean>

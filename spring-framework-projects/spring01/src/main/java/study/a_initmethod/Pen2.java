@@ -7,11 +7,9 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: liulg
  * @Date: 2020/10/9 14:13
- *
- *
  */
 @Component
-public class Pen2 implements InitializingBean,DisposableBean {
+public class Pen2 implements InitializingBean, DisposableBean {
     private Integer ink;
 
     @Override

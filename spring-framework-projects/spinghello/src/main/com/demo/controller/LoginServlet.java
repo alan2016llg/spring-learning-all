@@ -20,11 +20,11 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         HttpSession session = req.getSession();
-        session.setAttribute("user","alan");
-        getServletContext().setAttribute("sessionid",session.getId());
+        session.setAttribute("user", "alan");
+        getServletContext().setAttribute("sessionid", session.getId());
         ObjectMapper mapper = new ObjectMapper();
-        String s =  mapper.readValue("123",String.class);
+        String s = mapper.readValue("123", String.class);
         System.out.println(s);
-        resp.sendRedirect(req.getContextPath()+"/index.jsp");
+        resp.sendRedirect(req.getContextPath() + "/index.jsp");
     }
 }

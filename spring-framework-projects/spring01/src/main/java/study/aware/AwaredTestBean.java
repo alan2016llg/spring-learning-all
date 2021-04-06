@@ -10,14 +10,14 @@ import java.util.stream.Stream;
 /**
  * @Author: liulg
  * @Date: 2020/10/9 9:36
- *
+ * <p>
  * ApplicationContextAware:回调注入 ApplicationContext
  * BeanNameAware:获取注入的bean的名字
  */
-public class AwaredTestBean implements ApplicationContextAware,BeanNameAware {
+public class AwaredTestBean implements ApplicationContextAware, BeanNameAware {
 
-    private  ApplicationContext ctx;
-    private  String beanName;
+    private ApplicationContext ctx;
+    private String beanName;
 
     public String getBeanName() {
         return beanName;
@@ -26,7 +26,7 @@ public class AwaredTestBean implements ApplicationContextAware,BeanNameAware {
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
 
-        this.ctx=applicationContext;
+        this.ctx = applicationContext;
     }
 
     //测试打印所有的bean名称
@@ -36,6 +36,6 @@ public class AwaredTestBean implements ApplicationContextAware,BeanNameAware {
 
     @Override
     public void setBeanName(String s) {
-        this.beanName=s;
+        this.beanName = s;
     }
 }

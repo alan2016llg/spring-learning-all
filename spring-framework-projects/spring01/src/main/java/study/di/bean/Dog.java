@@ -5,9 +5,10 @@ package study.di.bean;
  * @Date: 2020/9/27 0:53
  */
 public class Dog {
-    private  String name;
-    public Dog(String name){
-        this.name=name;
+    private String name;
+
+    public Dog(String name) {
+        this.name = name;
     }
 
     public String getName() {

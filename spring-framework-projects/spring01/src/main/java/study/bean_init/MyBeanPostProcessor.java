@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: liulg
  * @Date: 2020/11/16 16:39
- *
+ * <p>
  * BeanPostProcessor接口实现类可以在bean初始化前后对bean做一些处理。
  * BeanPostProcessor是针对于容器中的所有的bean的
  */
@@ -24,7 +24,7 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
      */
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("初始化完成："+beanName);
+        System.out.println("初始化完成：" + beanName);
         return bean;
     }
 
@@ -35,8 +35,8 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
      */
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("初始化前："+beanName);
-        if(bean instanceof Cap){
+        System.out.println("初始化前：" + beanName);
+        if (bean instanceof Cap) {
             System.out.println(((Cap) bean).name);
         }
         return bean;

@@ -10,11 +10,11 @@ import study.di.proconf.InjectValueConfiguration;
 /**
  * @Author: liulg
  * @Date: 2020/9/18 15:31
- *
+ * <p>
  * 依赖注入
  */
 public class MainTest {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         BeanFactory beanFactory = new ClassPathXmlApplicationContext("basic_di/spring_di.xml");
         Person person = beanFactory.getBean(Person.class);
         System.out.println(person);

@@ -11,9 +11,9 @@ import study.i_lazyinject.bean.Person;
  */
 public class Test {
     public static void main(String[] args) {
-        ApplicationContext context =  new AnnotationConfigApplicationContext("study.i_lazyinject.bean");
+        ApplicationContext context = new AnnotationConfigApplicationContext("study.i_lazyinject.bean");
 
-        Dog dog  = (Dog) context.getBean("dog");
+        Dog dog = (Dog) context.getBean("dog");
         System.out.println(dog.getPerson());
     }
 }

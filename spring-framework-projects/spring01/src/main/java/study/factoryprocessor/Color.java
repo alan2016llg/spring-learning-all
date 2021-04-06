@@ -4,7 +4,7 @@ package study.factoryprocessor;
  * @Author: liulg
  * @Date: 2020/12/7 14:57
  */
-public abstract  class Color {
+public abstract class Color {
     protected String name;
     String size;
 

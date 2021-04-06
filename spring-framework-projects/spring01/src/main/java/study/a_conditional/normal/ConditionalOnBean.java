@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 /**
  * @Author: liulg
  * @Date: 2020/10/14 15:58
- *
+ * <p>
  * 抽取出来，成为通用的
  */
 
@@ -17,6 +17,7 @@ import java.lang.annotation.*;
 @Conditional(OnBeanCondition.class)
 public @interface ConditionalOnBean {
     String[] beanNames() default {};
+
     Class<?>[] value() default {};
 
 }

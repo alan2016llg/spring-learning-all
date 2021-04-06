@@ -38,7 +38,7 @@ public class ToyFactoryBean implements FactoryBean<Toy> {
 
 
     public ToyFactoryBean() {
-        this.child=new Child();
+        this.child = new Child();
         System.out.println("ToyFactoryBean 初始化了。。。");
     }
 }

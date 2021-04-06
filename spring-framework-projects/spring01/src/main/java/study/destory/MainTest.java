@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class MainTest {
     public static void main(String[] args) {
-        ApplicationContext context  =new AnnotationConfigApplicationContext("study.destory");
+        ApplicationContext context = new AnnotationConfigApplicationContext("study.destory");
         ((AnnotationConfigApplicationContext) context).close();
     }
 }

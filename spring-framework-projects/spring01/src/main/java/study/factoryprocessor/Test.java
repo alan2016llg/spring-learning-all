@@ -9,9 +9,9 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
  */
 public class Test {
     public static void main(String[] args) {
-        ApplicationContext context  = new AnnotationConfigApplicationContext("study.factoryprocessor");
+        ApplicationContext context = new AnnotationConfigApplicationContext("study.factoryprocessor");
         Red red = context.getBean(Red.class);
-       System.out.println(red);
+        System.out.println(red);
 
     }
 }

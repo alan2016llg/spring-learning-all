@@ -12,7 +12,7 @@ public class Test {
     public static void main(String[] args) {
 
         ApplicationContext context = new AnnotationConfigApplicationContext("study.factorybeanuse");
-        Toy bean  = (Toy) context.getBean("toyFactoryBean");
+        Toy bean = (Toy) context.getBean("toyFactoryBean");
         System.out.println(bean);
 
     }

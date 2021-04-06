@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component("adog")
 public class Dog {
     @Value("i am dog.")
-    private  String name;
+    private String name;
 
     public String getName() {
         return name;

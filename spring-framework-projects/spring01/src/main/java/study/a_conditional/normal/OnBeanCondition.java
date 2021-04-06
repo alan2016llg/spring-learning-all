@@ -11,9 +11,10 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 public class OnBeanCondition implements Condition {
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-        // 先获取目标自定义注解ConditionalOnBean上的beanNames属性
+        // 先获取目标自定义注解ConditionalOnBean上的beanNames属性和value属性
         String[] beanNames = (String[]) metadata.getAnnotationAttributes(ConditionalOnBean.class.getName()).get("beanNames");
-       Class<?>[] classes  = (Class<?>[]) metadata.getAnnotationAttributes(ConditionalOnBean.class.getName()).get("value");
+        Class<?>[] classes = (Class<?>[]) metadata.getAnnotationAttributes(ConditionalOnBean.class.getName()).get("value");
+        //判断容器beandefinition中是否包含该class
         for (Class cla : classes) {
             if (!context.getBeanFactory().containsBeanDefinition(cla.getName())) {
                 return false;

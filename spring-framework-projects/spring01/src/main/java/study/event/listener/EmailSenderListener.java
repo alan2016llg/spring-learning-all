@@ -12,8 +12,8 @@ import study.event.service.RegisterSuccessEvent;
 public class EmailSenderListener {
 
     @EventListener
-    public void emailSenderListener(RegisterSuccessEvent event){
+    public void emailSenderListener(RegisterSuccessEvent event) {
         String name = (String) event.getSource();
-        System.out.println("监听到注册成功事件，发送邮件to:"+name);
+        System.out.println("监听到注册成功事件，发送邮件to:" + name);
     }
 }

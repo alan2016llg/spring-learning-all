@@ -16,9 +16,8 @@ import java.util.List;
 /**
  * @Author: liulg
  * @Date: 2020/12/8 17:46
- *
  */
-public class DataSourceRegisterPostProcessor implements BeanDefinitionRegistryPostProcessor,EnvironmentAware {
+public class DataSourceRegisterPostProcessor implements BeanDefinitionRegistryPostProcessor, EnvironmentAware {
     private Environment environment;
     String driverClassName = null;
 
@@ -38,7 +37,7 @@ public class DataSourceRegisterPostProcessor implements BeanDefinitionRegistryPo
         }
     }
 
-    private String   regClassName( List<String> driverClassNames){
+    private String regClassName(List<String> driverClassNames) {
         for (String temp : driverClassNames) {
             try {
                 Class.forName(temp);

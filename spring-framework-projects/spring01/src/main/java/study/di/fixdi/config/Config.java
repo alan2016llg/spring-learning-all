@@ -18,7 +18,7 @@ public class Config {
 
     @Bean
     @Primary
-    public Dog getDog(){
+    public Dog getDog() {
         return new Dog();
     }
 }

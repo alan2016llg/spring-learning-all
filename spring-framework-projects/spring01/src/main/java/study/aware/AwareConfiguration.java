@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class AwareConfiguration {
 
     @Bean
-    public AwaredTestBean aaa(){
-        return  new AwaredTestBean();
+    public AwaredTestBean aaa() {
+        return new AwaredTestBean();
     }
 }

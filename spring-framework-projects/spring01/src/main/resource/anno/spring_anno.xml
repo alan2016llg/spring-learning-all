@@ -3,7 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-   <bean id="black" class="study.d_withanno.bean.Black"></bean>
+    <bean id="black" class="study.d_withanno.bean.Black"></bean>
     <bean id="red" class="study.d_withanno.bean.Red"></bean>
     <bean id="dog" class="study.d_withanno.bean.Dog"></bean>
 

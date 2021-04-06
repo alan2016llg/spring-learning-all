@@ -19,6 +19,6 @@ public class MainOftypeTest {
         String[] beanname = context.getBeanNamesForType(DemoDao.class);
         Arrays.stream(beanname).forEach(System.out::println);
         Map<String, DemoDao> beans = context.getBeansOfType(DemoDao.class);
-        beans.forEach((name,bean)->System.out.println("bean name:"+name+",bean class:"+bean.toString()));
+        beans.forEach((name, bean) -> System.out.println("bean name:" + name + ",bean class:" + bean.toString()));
     }
 }

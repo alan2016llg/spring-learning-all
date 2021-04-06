@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationEvent;
 /**
  * @Author: liulg
  * @Date: 2020/10/14 11:26
- *
+ * <p>
  * 自定义事件：一个注册成功的事件
  */
 public class RegisterSuccessEvent extends ApplicationEvent {

@@ -18,13 +18,13 @@ import java.util.stream.Stream;
  * 获取所有带有某个注解的bean---getBeansWithAnnotation
  */
 public class WithAnnoApplication {
-    public static void main(String[] args)throws Exception{
+    public static void main(String[] args) throws Exception {
         ApplicationContext context = new ClassPathXmlApplicationContext("/anno/spring_anno.xml");
         System.out.println(context.getBean("dog"));
         //获取带有clor注解的bean
         Map<String, Object> beansWithAnnotation = context.getBeansWithAnnotation(Color.class);
-        beansWithAnnotation.forEach((k,v)->{
-            System.out.println(k+":"+v.toString());
+        beansWithAnnotation.forEach((k, v) -> {
+            System.out.println(k + ":" + v.toString());
         });
 
         //获取ioc容器中所有的bean
@@ -34,6 +34,8 @@ public class WithAnnoApplication {
         //延迟查找，spring5的拓展使用
         ObjectProvider<Dog> objectProvider = context.getBeanProvider(Dog.class);
         Dog d = objectProvider.getIfAvailable(Dog::new);//不存在则创建
-        objectProvider.ifAvailable(dog -> {System.out.println(dog);});//存在则执行
+        objectProvider.ifAvailable(dog -> {
+            System.out.println(dog);
+        });//存在则执行
     }
 }

@@ -13,5 +13,5 @@ import java.lang.annotation.*;
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Conditional(OnClassNameConditional.class)
 public @interface ConditionalOnClassName {
-   String value() default "";
+    String value() default "";
 }

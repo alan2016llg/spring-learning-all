@@ -15,7 +15,7 @@ public class Child {
         return wantToy;
     }
 
-    public Child(){
+    public Child() {
         System.out.println("实例化child");
     }
 }

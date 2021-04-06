@@ -11,6 +11,6 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import({MySQLJdbcConfiguration.class,H2JdbcConfiguration.class}) //模块装配
+@Import({MySQLJdbcConfiguration.class, H2JdbcConfiguration.class}) //模块装配
 public @interface EnableJdbc {
 }

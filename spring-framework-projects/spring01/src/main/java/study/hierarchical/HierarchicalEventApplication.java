@@ -6,7 +6,7 @@ import study.annotation.AnnotationConfigApplication;
 /**
  * @Author: liulg
  * @Date: 2020/12/9 16:56
- *
+ * <p>
  * 打印的结果表示：子容器的事件会向上传播到父容器，父容器的事件不会向下传播
  */
 public class HierarchicalEventApplication {
