@@ -9,6 +9,7 @@ import java.util.stream.Stream;
 /**
  * @Author: liulg
  * @Date: 2020/10/14 14:38
+ * 通过@Import注解导入类
  */
 public class TavernTest {
     public static void main(String[] args) {

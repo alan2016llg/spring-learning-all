@@ -26,12 +26,12 @@ public class ServiceImpl {
     @Transactional(propagation = Propagation.REQUIRED)
     public void getUser() {
         System.out.println(TransactionSynchronizationManager.getCurrentTransactionName());
-        jdbcTemplate.update("insert into tbl_user(name,tel) values(?,?)", "xiaohong", "17");
-        try {
-            insert.insetUser();
+        jdbcTemplate.update("insert into tbl_user(name,tel) values(?,?)", "1234", "1777777");
+        insert.insetUser();
+       /* try {
         } catch (Exception e) {
             e.printStackTrace();
-        }
+        }*/
         publisher.publishEvent(new UserEvent("execute eover"));
     }
 

@@ -18,9 +18,10 @@ public class InsertImpl {
     @Resource
     JdbcTemplate jdbcTemplate;
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW, rollbackFor = Exception.class)
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void insetUser() {
         System.out.println(TransactionSynchronizationManager.getCurrentTransactionName());
-        jdbcTemplate.update("insert into tbl_user(name,tel) values(?,?)", "alan", "999");
+        jdbcTemplate.update("insert into tbl_user(name,tel) values(?,?)", "bbbbb", "999");
+        int m = 1/0;
     }
 }

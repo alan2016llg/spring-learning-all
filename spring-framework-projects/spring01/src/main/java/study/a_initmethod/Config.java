@@ -17,4 +17,9 @@ public class Config {
     public Pen3 pen3() {
         return new Pen3();
     }
+
+  //  @Bean(destroyMethod = "destroy")
+    public  Pen4 pen4(){
+        return new Pen4();
+    }
 }

@@ -31,6 +31,7 @@ public class AwaredTestBean implements ApplicationContextAware, BeanNameAware {
 
     //测试打印所有的bean名称
     public void printBeanNames() {
+        System.out.println("---"+beanName);
         Stream.of(ctx.getBeanDefinitionNames()).forEach(System.out::println);
     }
 
